@@ -220,18 +220,3 @@ The use of port `8081` and unencrypted HTTP for data exfiltration is consistent 
 | Command and Control | T1071.001 | Application Layer Protocol: Web Protocols | HTTP communications to `185.92.220.87:8081` |
 | Command and Control | T1105 | Ingress Tool Transfer | Tooling retrieved from external C2 server |
 | Exfiltration | T1048.003 | Exfiltration Over Unencrypted Protocol | `curl` and `Invoke-WebRequest` POST to `185.92.220.87:8081` |
-
----
-
-## Recommendations
-
-1. **Enforce MFA on all RDP-accessible accounts** to prevent credential-based brute-force attacks from succeeding even when passwords are compromised.
-2. **Restrict RDP access** to authorized IP ranges via Network Security Groups or firewall rules; disable public-facing RDP where not required.
-3. **Implement account lockout policies** to automatically lock accounts after a defined number of failed login attempts.
-4. **Monitor for scheduled task creation** via Defender for Endpoint or SIEM alerting rules, especially tasks with names mimicking legitimate Microsoft services.
-5. **Alert on Defender exclusion modifications** — any change to `Add-MpPreference -ExclusionPath` should trigger a high-priority alert for SOC review.
-6. **Restrict PowerShell execution policies** and enable Script Block Logging, Module Logging, and Transcription Logging for full visibility into PowerShell activity.
-7. **Block known malicious IPs** (`159.26.106.84`, `185.92.220.87`, `79.76.123.251`) at the perimeter firewall and in endpoint detection rules.
-8. **Deploy application whitelisting** to prevent execution of binaries from non-standard paths such as `C:\Users\Public\` and `C:\Windows\Temp\`.
-9. **Enable enhanced network monitoring** for outbound HTTP traffic on non-standard ports (e.g., 8081) to detect C2 and exfiltration activity.
-10. **Conduct a password reset** for all accounts on the compromised system and review for lateral movement to other assets.
