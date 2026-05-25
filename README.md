@@ -1,4 +1,7 @@
-<img width="1560" height="598" alt="Screenshot 2026-05-25 161358" src="https://github.com/user-attachments/assets/d1b7732f-230a-4541-938a-6b4cf4a764dc" /><img width="1560" height="598" alt="Screenshot 2026-05-25 161358" src="https://github.com/user-attachments/assets/761e57bf-413b-45d2-8656-54f7ba3a9cd9" /># Threat-Hunts-Pwd-Spray-to-Full-Compromise
+<img width="1128" height="743" alt="Screenshot 2026-05-25 162917" src="https://github.com/user-attachments/assets/0f794989-0c35-4d5f-b7e9-1a08cc1f1345" />
+
+
+## Threat-Hunts-Pwd-Spray-to-Full-Compromise
 
 ## Executive Summary
 
@@ -66,7 +69,9 @@ DeviceLogonEvents
 | order by TimeGenerated desc
 ```
 <img width="1385" height="577" alt="Screenshot 2026-05-22 164945" src="https://github.com/user-attachments/assets/b766337c-3958-4513-9da3-25cd339f57a2" />
+
 <img width="1293" height="632" alt="Screenshot 2026-05-22 165021" src="https://github.com/user-attachments/assets/c8382212-6363-49d0-bcb0-03dae6e52740" />
+
 ---
 
 ### Execution — Malicious Binary
@@ -90,7 +95,9 @@ DeviceProcessEvents
 | order by TimeGenerated desc
 ```
 <img width="1702" height="475" alt="Screenshot 2026-05-22 171440" src="https://github.com/user-attachments/assets/85719590-6c7e-4c81-b612-6fd16e964bad" />
+
 <img width="1010" height="563" alt="Screenshot 2026-05-22 171549" src="https://github.com/user-attachments/assets/3408c6d2-f6cb-4a3b-9e03-45f5843d874d" />
+
 ---
 
 ### Persistence — Scheduled Task
@@ -149,6 +156,7 @@ DeviceProcessEvents
 | order by TimeGenerated desc
 ```
 <img width="1560" height="598" alt="Screenshot 2026-05-25 161358" src="https://github.com/user-attachments/assets/79e8b5ef-abb7-4670-b44c-3487483f60b7" />
+
 ---
 
 ### Collection — Data Archiving
@@ -168,7 +176,7 @@ DeviceProcessEvents
 | order by TimeGenerated desc
 ```
 
-![Collection - Archive File](Screenshot_2026-05-25_161802.png)
+<img width="1633" height="547" alt="Screenshot 2026-05-25 161802" src="https://github.com/user-attachments/assets/be04d2b3-a2a3-49c1-a557-ea5532439c95" />
 
 ---
 
@@ -181,7 +189,7 @@ Analysis of the exfiltration-related process events revealed the C2 server desti
 
 The C2 traffic used HTTP (unencrypted), making it detectable via network monitoring and proxy logs.
 
-![C2 - Destination IP](Screenshot_2026-05-25_161834.png)
+<img width="1599" height="573" alt="Screenshot 2026-05-25 161834" src="https://github.com/user-attachments/assets/7604e6c0-fdc8-49bd-b3b6-bceb1bd1773e" />
 
 ---
 
@@ -193,7 +201,7 @@ The attacker attempted to exfiltrate the staged archive `backup_sync.zip` to the
 
 The use of port `8081` and unencrypted HTTP for data exfiltration is consistent with attacker tooling designed for speed rather than stealth.
 
-![Exfiltration - IP and Port](Screenshot_2026-05-25_161907.png)
+<img width="1579" height="619" alt="Screenshot 2026-05-25 161907" src="https://github.com/user-attachments/assets/2477d2d9-61e1-4282-a595-e4c3ea2ad23a" />
 
 ---
 
