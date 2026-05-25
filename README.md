@@ -1,4 +1,4 @@
-# Threat-Hunts-Pwd-Spray-to-Full-Compromise
+<img width="1560" height="598" alt="Screenshot 2026-05-25 161358" src="https://github.com/user-attachments/assets/d1b7732f-230a-4541-938a-6b4cf4a764dc" /><img width="1560" height="598" alt="Screenshot 2026-05-25 161358" src="https://github.com/user-attachments/assets/761e57bf-413b-45d2-8656-54f7ba3a9cd9" /># Threat-Hunts-Pwd-Spray-to-Full-Compromise
 
 ## Executive Summary
 
@@ -65,10 +65,8 @@ DeviceLogonEvents
 | project TimeGenerated, ActionType, DeviceName, AccountDomain, AccountName, RemoteIP
 | order by TimeGenerated desc
 ```
-![RDP Brute Force - Account Highlighted](Screenshot_2026-05-22_165021.png)
-![Uploading Screenshot 2026-05-22 165021.png…]()
-
-
+<img width="1385" height="577" alt="Screenshot 2026-05-22 164945" src="https://github.com/user-attachments/assets/b766337c-3958-4513-9da3-25cd339f57a2" />
+<img width="1293" height="632" alt="Screenshot 2026-05-22 165021" src="https://github.com/user-attachments/assets/c8382212-6363-49d0-bcb0-03dae6e52740" />
 ---
 
 ### Execution — Malicious Binary
@@ -91,11 +89,8 @@ DeviceProcessEvents
 | project TimeGenerated, DeviceName, AccountName, AccountDomain, ActionType, FileName, ProcessCommandLine
 | order by TimeGenerated desc
 ```
-
-![Execution - Process Events](Screenshot_2026-05-22_171440.png)
-
-![Execution - Command Line Detail](Screenshot_2026-05-22_171549.png)
-
+<img width="1702" height="475" alt="Screenshot 2026-05-22 171440" src="https://github.com/user-attachments/assets/85719590-6c7e-4c81-b612-6fd16e964bad" />
+<img width="1010" height="563" alt="Screenshot 2026-05-22 171549" src="https://github.com/user-attachments/assets/3408c6d2-f6cb-4a3b-9e03-45f5843d874d" />
 ---
 
 ### Persistence — Scheduled Task
@@ -112,8 +107,7 @@ DeviceEvents
 | project Timestamp, DeviceName, ActionType, TaskName = tostring(AdditionalFields.TaskName), InitiatingProcessFileName, InitiatingProcessCommandLine
 | order by Timestamp asc
 ```
-
-![Persistence - Scheduled Task Created](Screenshot_2026-05-25_155122.png)
+<img width="1385" height="572" alt="Screenshot 2026-05-25 155122" src="https://github.com/user-attachments/assets/cd019b1a-52e9-4969-b571-0d008ed68b7e" />
 
 ---
 
@@ -133,8 +127,8 @@ DeviceProcessEvents
 | project TimeGenerated, DeviceName, ProcessCommandLine, InitiatingProcessCommandLine
 | order by TimeGenerated desc
 ```
+<img width="1596" height="430" alt="Screenshot 2026-05-25 160832" src="https://github.com/user-attachments/assets/1b6dd415-20fc-4ca1-bf3c-f877a5192eaf" />
 
-![Defense Evasion - Defender Exclusion](Screenshot_2026-05-25_160832.png)
 
 ---
 
@@ -154,9 +148,7 @@ DeviceProcessEvents
 | project TimeGenerated, DeviceName, FileName, ProcessCommandLine, InitiatingProcessCommandLine
 | order by TimeGenerated desc
 ```
-
-![Discovery - System Enumeration](Screenshot_2026-05-25_161358.png)
-
+<img width="1560" height="598" alt="Screenshot 2026-05-25 161358" src="https://github.com/user-attachments/assets/79e8b5ef-abb7-4670-b44c-3487483f60b7" />
 ---
 
 ### Collection — Data Archiving
