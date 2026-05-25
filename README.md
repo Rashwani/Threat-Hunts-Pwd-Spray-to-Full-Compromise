@@ -1,7 +1,5 @@
 # Threat-Hunts-Pwd-Spray-to-Full-Compromise
 
-# Threat Hunt: RDP Brute Force to Data Exfiltration
-
 ## Executive Summary
 
 **Incident ID:** INC2025-0916-001  
@@ -67,10 +65,9 @@ DeviceLogonEvents
 | project TimeGenerated, ActionType, DeviceName, AccountDomain, AccountName, RemoteIP
 | order by TimeGenerated desc
 ```
-
-![RDP Brute Force - Logon Events](Screenshot_2026-05-22_164945.png)
-
 ![RDP Brute Force - Account Highlighted](Screenshot_2026-05-22_165021.png)
+![Uploading Screenshot 2026-05-22 165021.png…]()
+
 
 ---
 
